@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+nav {
+  padding: 1rem;
+  color: white;
+  background: linear-gradient(90deg, blueviolet, violet);
+}
+nav span {
+  font-size: 1.5rem;
+}
+
+main {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1rem;
+}
+#notes {
+  height: 80vh;
+  padding: 0.5rem;
+  /* border-right: 2px gray solid; */
+}
+#notes button {
+  font-size: 1.5rem;
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, blueviolet, violet);
+  color: white;
+}
+
+#notes button:hover {
+  box-shadow: 0 0 3px gray;
+}
+.notes-container {
+  padding: 0.5rem;
+  height: 100%;
+  overflow-y: auto;
+}
+.notes-container::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.notes-container::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: blueviolet;
+}
+.notes-container::-webkit-scrollbar-track {
+  background-color: rgb(236, 236, 236);
+}
+
+.note {
+  cursor: pointer;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(218, 218, 218);
+}
+.note-title {
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  display: block;
+  font-size: 1rem;
+}
+
+.note-date {
+  margin: 0.5rem 0;
+  display: block;
+  text-align: right;
+  color: gray;
+}
+.current-note {
+  display: flex;
+  flex-direction: column;
+}
+.current-note * {
+  border: none;
+  outline: none;
+}
+.current-note input {
+  font-size: 2rem;
+}
+.current-note textarea {
+  font-size: 1rem;
+  resize: none;
+}
