@@ -42,7 +42,6 @@ export function setCurrentNote(noteId = 0) {
 export function getCurrentNote() {
   const noteString = localStorage.getItem("noteId");
   let noteId = 0;
-  console.log(typeof noteString);
   if (noteString) {
     noteId = JSON.parse(noteString);
   }
