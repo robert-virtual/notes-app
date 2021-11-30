@@ -14,7 +14,7 @@ export function showNotes() {
     note.addEventListener("contextmenu", deleteNota); // al dar click derecho
     note.id = i;
     note.innerHTML = `
-            <span class="note-title">${title}</span>
+            <span class="note-title">${title.substr(0, 20)}...</span>
             <span class="note-content">${content.substring(0, 9)}...</span>
             <span class="note-date">${new Date(
               date
