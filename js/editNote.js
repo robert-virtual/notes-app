@@ -1,8 +1,6 @@
+import { currentContent, currentTitle } from "./constants.js";
 import { showNotes } from "./showNotes.js";
 import { getNotes, setCurrentNote } from "./storage.js";
-
-const currentTitle = document.getElementById("current-title");
-const currentContent = document.getElementById("current-content");
 
 export function editNote() {
   showNotes();

@@ -1,11 +1,12 @@
+import { currentContent, currentTitle, notesContainer } from "./constants.js";
 import { deleteNota } from "./deleteNote.js";
 import { editNote } from "./editNote.js";
 import { getNotes } from "./storage.js";
 
-const notesContainer = document.querySelector(".notes-container");
 export function showNotes() {
   notesContainer.innerHTML = "";
   let notes = getNotes();
+  let fragment = document.createDocumentFragment();
   notes.forEach(({ title, content, date }, i) => {
     const note = document.createElement("div");
     note.classList.add("note");
@@ -19,7 +20,10 @@ export function showNotes() {
               date
             ).toLocaleDateString()}</span>
         `;
-    notesContainer.appendChild(note);
+    fragment.append(note);
   });
+  notesContainer.appendChild(fragment);
+  currentTitle.value = notes[0].title;
+  currentContent.value = notes[0].content;
   //   notesContainer.append();
 }
