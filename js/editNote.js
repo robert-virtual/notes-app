@@ -8,7 +8,6 @@ export function editNote() {
   showNotes();
   const notes = getNotes();
   let note = notes[this.id];
-  console.log(note);
   setCurrentNote(this.id);
   currentTitle.value = note.title;
   currentContent.value = note.content;

@@ -6,11 +6,9 @@ export function deleteNota(e) {
   let borrar = confirm("Desea Eliminar la nota");
   if (borrar) {
     let listaNotas = getNotes();
-    console.log(this.id); // es string
 
     listaNotas = listaNotas.filter((note, i) => i != this.id); // i = number
     saveNotes(listaNotas);
-    console.log("eliminar");
     // volver a mostrar las notas actuales
     showNotes();
   }

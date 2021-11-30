@@ -2,11 +2,10 @@ import { deleteNota } from "./deleteNote.js";
 import { editNote } from "./editNote.js";
 import { getNotes } from "./storage.js";
 
+const notesContainer = document.querySelector(".notes-container");
 export function showNotes() {
-  const notesContainer = document.querySelector(".notes-container");
   notesContainer.innerHTML = "";
   let notes = getNotes();
-  console.log(notes);
   notes.forEach(({ title, content, date }, i) => {
     const note = document.createElement("div");
     note.classList.add("note");
